@@ -7,14 +7,15 @@
 # 2. Kiến trúc hệ thống
 <img width="1636" height="654" alt="system-architecture" src="https://github.com/user-attachments/assets/1c377b32-0041-4599-af12-3f41d32c8d27" />
 
-  Hệ thống bao gồm các thành phần như sau:
-    - Data Source: Dữ liệu người dùng về game events (login, purchase, ...) được tạo ngẫu nhiên
-    - Apache Airflow: Được dùng để điều phối và thu thập dữ liệu từ source
-    - Apache Kafka và Zookeeper: Tiếp nhận, lưu trữ và quản lý event stream data
-    - Kafka UI: Giám sát và theo dõi hiệu suất của kafka broker
-    - Apache Spark: Xử lý, làm sạch, chuyển đổi event stream data và lưu vào data lake
-    - Minio: Nơi lưu trữ dữ liệu sau khi được xử lý
-    - PostgreSQL: Lưu trữ metadata cho Airflow
+
+Hệ thống bao gồm các thành phần như sau:
+* **Data Source**: Dữ liệu người dùng về game events (login, purchase,...) được tạo ngẫu nhiên.
+* **Apache Airflow**: Điều phối và lập lịch thu thập dữ liệu từ nguồn.
+* **Apache Kafka & Zookeeper**: Tiếp nhận, lưu trữ và quản lý luồng dữ liệu (event stream).
+* **Kafka UI**: Giao diện giám sát và theo dõi hiệu suất của Kafka Broker.
+* **Apache Spark**: Xử lý, làm sạch và chuẩn hóa dữ liệu từ Kafka.
+* **MinIO**: Data Lake lưu trữ dữ liệu sau khi xử lý (Bronze, Silver, Gold).
+* **PostgreSQL**: Lưu trữ metadata cho Airflow và kết quả phân tích cuối cùng.
 
 # 3. Công nghệ sử dụng
   - Storage: MinIO, PostgreSQL
