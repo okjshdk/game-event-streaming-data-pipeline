@@ -15,7 +15,7 @@ Hệ thống bao gồm các thành phần như sau:
 * **Kafka UI**: Giao diện giám sát và theo dõi hiệu suất của Kafka Broker.
 * **Apache Spark**: Xử lý, làm sạch và chuẩn hóa dữ liệu từ Kafka.
 * **MinIO**: Data Lake lưu trữ dữ liệu sau khi xử lý (Bronze, Silver, Gold).
-* **PostgreSQL**: Lưu trữ metadata cho Airflow và kết quả phân tích cuối cùng.
+* **PostgreSQL**: Lưu trữ metadata cho Airflow.
 
 # 3. Công nghệ sử dụng
   - Storage: MinIO, PostgreSQL
